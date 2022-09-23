@@ -14,22 +14,33 @@ ul {
     padding: 0;
 }
 
+
+ul > li > img {
+    width: 2ch;
+}
+
+ul > li {
+    align-items: center;
+    display: flex;
+    gap: .75rem;
+}
+
 header {
     grid-area: header;
-    background: yellow;
 }
 
 .sidebar {
+    background: #06b6d4;
+    display: grid;
+    font-size: 150%;
     grid-area: sidebar;
-    background: blue;
+    padding-left: 1rem;
 }
 
 .project {
-    background: orangered;
     grid-area: main;
 }
 
 .info {
-    background: red;
     grid-area: info;
 }
