@@ -27,8 +27,6 @@ ul > li > img {
     transition: all 100ms ease-in;
 }
 
-/* //rgb(253, 253, 92); */
-
 ul > li {
     align-items: center;
     cursor: pointer;
