@@ -4,11 +4,16 @@ body {
     display: grid;
     font-family: 'Open Sans', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     grid-template-columns: 2fr 5fr 2fr;
-    grid-template-rows: 25% 60% 15%;
+    /* grid-template-rows: 25% 60% 15%; */
     grid-template-areas: 'sidebar header header '
                          'sidebar main info'
                          'sidebar main info';
     min-height: 100vh;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -21,35 +26,42 @@ ul {
 }
 
 
-ul > li > img {
+.sidebar ul > li > img {
     width: 2ch;
     box-shadow: inset 1px 1px 10px #fff, -1px -1px 10px #fff;
     transition: all 100ms ease-in;
 }
 
-ul > li {
+.sidebar ul > li {
     align-items: center;
     cursor: pointer;
     display: flex;
     gap: .75rem;
+    margin-right: 10px;
     transition: all 100ms ease-in;
 }
 
-ul > li:hover, ul > li:hover > img {
+.sidebar ul > li:hover, .sidebar ul > li:hover > img {
     box-shadow: inset 1px 1px 10px rgb(253, 253, 92), -1px -1px 10px rgb(253, 253, 92);
     scale: 1.05;
 }
 header {
+    background: #334155;
     grid-area: header;
 }
 
 .sidebar {
+    align-content: center;
     background: #0f172a;
     color: white;
+    height: 100vh;
+    row-gap: 2rem;
     display: grid;
     font-size: 150%;
     grid-area: sidebar;
     padding-left: 1rem;
+    position: sticky;
+    top: 0;
 }
 
 .project {
@@ -58,4 +70,8 @@ header {
 
 .info {
     grid-area: info;
+}
+
+.info ul > li > p {
+    font-size: 85%;
 }
