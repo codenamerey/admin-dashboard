@@ -84,6 +84,13 @@ header img:not(#profile) {
     gap: 1rem;
 }
 
+.lower-div{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .lower-div div {
     gap: 1rem;
 }
@@ -134,12 +141,6 @@ header img {
     display: flex;
 }
 
-.lower-div{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
 .sidebar {
     align-content: center;
     background: #0f172a;
@@ -164,4 +165,53 @@ header img {
 
 .info ul > li > p {
     font-size: 85%;
+}
+
+.project, .info {
+    background: #bbf7d0;
+}
+
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    padding: 1rem;
+}
+
+.grid > .cell {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.grid > .cell > p > img {
+    background: #000;
+    height: 3rem;
+    width: 3rem;
+}
+
+.info > .flex > ul > .card {
+    background: #fff;
+    margin: .5rem;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .lower-div {
+        justify-content: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    body {
+        grid-template-columns: 5fr 2fr;
+        /* grid-template-rows: 25% 60% 15%; */
+        grid-template-areas: 'header header '
+                             'main info'
+                             'main info';
+        min-height: 100vh;
+    }   
 }
