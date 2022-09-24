@@ -25,6 +25,11 @@ ul {
     padding: 0;
 }
 
+span > *{
+    margin: 0;
+    padding: 0;
+}
+
 
 .sidebar ul > li > img {
     width: 2ch;
@@ -45,9 +50,94 @@ ul {
     box-shadow: inset 1px 1px 10px rgb(253, 253, 92), -1px -1px 10px rgb(253, 253, 92);
     scale: 1.05;
 }
+
 header {
     background: #334155;
+    color:white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     grid-area: header;
+    padding: 2rem;
+}
+
+header input[type="search"] {
+    border: 1px solid #0f172a;
+    border-radius: 1rem;
+    padding: .5rem .25rem;
+    outline: none;
+    width: 75%;
+}
+
+header img:not(#profile) {
+    box-shadow: inset 1px 1px 5px #fff, -1px -1px 5px #fff;
+}
+
+.upper-div #profile {
+    aspect-ratio: 1;
+    border-radius: 100%;
+    width: 4rem;
+    object-fit: cover;
+}
+
+.upper-div > div {
+    gap: 1rem;
+}
+
+.lower-div div {
+    gap: 1rem;
+}
+
+.lower-div > .buttons {
+    display: flex;
+    margin: 1rem;
+}
+
+.buttons > button {
+    background: rgb(11, 11, 49);
+    border: 1px solid #0f172a;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 900;
+    padding: 1rem;
+}
+
+.lower-div .profile {
+    align-items: center;
+    display: flex;
+    font-size: 125%;
+}
+
+#profile {
+    aspect-ratio: 1;
+    width: 8rem;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+header > .upper-div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 5fr 1fr;
+}
+
+header > .upper-div > div {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 3ch;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.lower-div{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sidebar {
